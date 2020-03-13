@@ -4,7 +4,7 @@
 
     include_once("conexao.php");
 
-    $querySelect = "select cpf, senha from usuarios where cpf like '".$cpf."' "; // Busca os dados no BD
+    $querySelect = "select cpf, senha, nome from usuarios where cpf like '".$cpf."' "; // Busca os dados no BD
 
     $execucao = mysqli_query($conexao, $querySelect);
 
@@ -13,8 +13,14 @@
     $cpfDb = $dados['cpf'];
     $senhaDb = $dados['senha'];
 
-    if($cpf == $cpfDb && $senha == $senhaDb){
+    if($cpf == $cpfDb && md5($senha) == $senhaDb){
         echo "<script>alert('Logado com Sucesso!')</script>";
+        
+        session_start();
+        $_SESSION['nome'] = $dados['nome'];
+        $login = true;
+
+        $_SESSION['login'] = $login;
         
         echo "<script> window.location.href = 'menuPrivado.php'</script>";
     }else{
