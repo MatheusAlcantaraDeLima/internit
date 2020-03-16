@@ -7,6 +7,7 @@
     $endereco = $_POST["endereco"];
     $cidade = $_POST["cidade"];
     $uf = $_POST["uf"];
+    $senha = $_POST["senha"];
 
     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
         echo '<script>alert("email válido")</script>';
@@ -18,7 +19,7 @@
 
     mysqli_set_charset($conexao, "utf8");
 
-    $updateBD = "update usuarios set email = '".$email."', cep = '".$cep."', endereco = '".$endereco."', cidade = '".$cidade."', uf = '".$uf."' where cpf like '".$cpf."' ";
+    $updateBD = "update usuarios set email = '".$email."', cep = '".$cep."', endereco = '".$endereco."', cidade = '".$cidade."', uf = '".$uf."', senha = '".md5($senha)."' where cpf like '".$cpf."' ";
 
     $execucao = mysqli_query($conexao, $updateBD);
 

@@ -82,6 +82,10 @@
                         <label for="uf">UF</label>
                         <input type="text" id="uf" name="uf" class="form-control" require>
                     </div>
+                    <div>
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" class="form-control" require>
+                    </div>
                     <hr>
                     <input type="submit"  value="Salvar alterações" class="btn btn-success">
                 </form>

@@ -7,6 +7,8 @@
 
 
         $buscaUsuarios = "select * from usuarios ";
+        $buscaAssinantes = "select * from assinantes";
+
         $executaBusca = mysqli_query($conexao, $buscaUsuarios);
 ?>
     <!DOCTYPE html>
@@ -62,6 +64,14 @@
                 <hr>
                 <div>
                     <a href="menuPrivado.php"><input type="button"  value="Voltar para Menu" class="btn btn-primary"></a>
+                </div>
+                <div>
+                    <br>
+                    <form action="exclusaoUsuario.php" method="POST">
+                        <label for="excluir">Excluir um usuário</label>
+                        <input type="text" id="excluir"  name="excluir" class="form-control" placeholder="Digite o cpf do usuário aqui"><br>
+                        <input type="submit"  value="Excluir" class="btn btn-danger">
+                    </form>
                 </div>
         </div>
         <!--SCRIPT DO BOOTSTRAP-->
