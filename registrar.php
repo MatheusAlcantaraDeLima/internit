@@ -33,7 +33,7 @@
                 <div>
                     <label for="cep">Digite o seu CEP</label>
                     <div>
-                        <input type="text" id="cep" name="cep" class="form-control" required onblur="pesquisacep(this.value);" maxlength="9">
+                        <input type="text" id="cep" name="cep" class="form-control" required onblur="pesquisacep(this.value);" maxlength="8">
                     </div>
                 </div>
                 <div>

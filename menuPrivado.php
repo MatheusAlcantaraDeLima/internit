@@ -1,8 +1,6 @@
 <?php
     session_start();
-    if($_SESSION['login'] == true){
-
-    
+    if($_SESSION['login'] == true){ 
 ?>
     <!DOCTYPE html>
     <html lang="pt-br">
@@ -17,8 +15,16 @@
         <div class="container">
             <h1>Menu Restrito</h1>
             <h3>Seja bem vindo <?php echo($_SESSION['nome']);?></h3>
+            <hr>
+           <h5>Gerenciamento de notícias</h5>
             <a href="#"><input type="button"  value="Remover informações" class="btn btn-primary"></a>
             <a href="#"><input type="button"  value="Adicionar informações" class="btn btn-primary"></a>
+            <a href="#"><input type="button"  value="Alterar informações" class="btn btn-primary"></a>
+            <hr>
+            <h5>Gerenciamento de usuários</h5>
+            <a href="alterarMeusDados.php"><input type="button"  value="Alterar os meus dados" class="btn btn-primary"></a>
+            <a href="outrosUsuarios.php"><input type="button"  value="Gerenciar outros usuários" class="btn btn-primary"></a>
+            <hr>
             <a href="logar.php"><input type="button"  value="Deslogar" class="btn btn-danger"></a>
         </div>
         <!--SCRIPT DO BOOTSTRAP-->
@@ -30,6 +36,6 @@
 <?php
     }else{
         echo("<script>alert('É necessário logar, por favor, insira as suas credenciais.');</script>");
-        echo "<script> window.location.href = 'logar.php'</script>";
+        echo("<script> window.location.href = 'logar.php'</script>");
     }
 ?>

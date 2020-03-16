@@ -20,6 +20,7 @@
         $_SESSION['nome'] = $dados['nome'];
         $login = true;
 
+        $_SESSION['cpf'] = $cpf;
         $_SESSION['login'] = $login;
         
         echo "<script> window.location.href = 'menuPrivado.php'</script>";

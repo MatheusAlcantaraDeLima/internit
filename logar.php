@@ -19,7 +19,7 @@
                 <div>
                     <label for="cpf">Digite o seu CPF</label>
                     <div>
-                        <input type="text" id="cpf" name="cpf" class="form-control" required required maxlength="11">
+                        <input type="text" id="cpf" name="cpf" class="form-control" required maxlength="11">
                     </div>
                 </div>
                 <div>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <input type="submit" value="Enviar" class="btn btn-success">
+            <input type="submit" value="Logar" class="btn btn-success">
             <input type="reset" value="resetar campos" class="btn btn-danger">
             <a href="index.php"><input type="button" value="Voltar para o menu" class="btn btn-primary"></a>
         </form>
