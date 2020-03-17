@@ -64,27 +64,27 @@
                 <form action="updateDadosPessoais.php" method="POST">
                     <div>
                         <label for="email">E-mail</label>
-                        <input type="text" id="email" name="email" class="form-control" require>
+                        <input type="text" id="email" name="email" class="form-control" required>
                     </div>
                     <div>
                         <label for="cep">CEP</label>
-                        <input type="text" id="cep" name="cep" class="form-control" maxlength="8" require>
+                        <input type="text" id="cep" name="cep" class="form-control" maxlength="8" required>
                     </div>
                     <div>
                         <label for="endereco">Endereço</label>
-                        <input type="text" id="endereco" name="endereco" class="form-control" require>
+                        <input type="text" id="endereco" name="endereco" class="form-control" required>
                     </div>
                     <div>
                         <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" class="form-control" require>
+                        <input type="text" id="cidade" name="cidade" class="form-control" required>
                     </div>
                     <div>
                         <label for="uf">UF</label>
-                        <input type="text" id="uf" name="uf" class="form-control" require>
+                        <input type="text" id="uf" name="uf" class="form-control" required>
                     </div>
                     <div>
                         <label for="senha">Senha</label>
-                        <input type="password" id="senha" name="senha" class="form-control" require>
+                        <input type="password" id="senha" name="senha" class="form-control" required>
                     </div>
                     <hr>
                     <input type="submit"  value="Salvar alterações" class="btn btn-success">

@@ -7,8 +7,7 @@
 
 
         $buscaUsuarios = "select * from usuarios ";
-        $buscaAssinantes = "select * from assinantes";
-
+        
         $executaBusca = mysqli_query($conexao, $buscaUsuarios);
 ?>
     <!DOCTYPE html>
@@ -62,18 +61,51 @@
                     }
                 ?>
                 <hr>
+                <br>
+                <h2>Exclusão de usuário</h2>
                 <div>
-                    <a href="menuPrivado.php"><input type="button"  value="Voltar para Menu" class="btn btn-primary"></a>
-                </div>
-                <div>
-                    <br>
                     <form action="exclusaoUsuario.php" method="POST">
                         <label for="excluir">Excluir um usuário</label>
-                        <input type="text" id="excluir"  name="excluir" class="form-control" placeholder="Digite o cpf do usuário aqui"><br>
+                        <input type="text" id="excluir"  name="excluir" class="form-control" placeholder="Digite o cpf do usuário aqui" required><br>
                         <input type="submit"  value="Excluir" class="btn btn-danger">
                     </form>
                 </div>
+                <div>
+                <br>
+                <h2>Formulário para alteração de dados dos outros usuários</h2>
+                    <form action="alteraDadosOutrosUsuarios.php" method="POST">
+                        <div>
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" class="form-control" required maxlength="11">
+                        </div>
+                        <div>
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep" class="form-control" required onblur="pesquisacep(this.value);" maxlength="8">
+                        </div>
+                        <div>
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="uf">UF</label>
+                            <input type="text" id="uf" name="uf" class="form-control" required>
+                        </div>
+                        <br>
+                        <input type="submit"  value="Salvar alterações" class="btn btn-success"> 
+                        <a href="menuPrivado.php"><input type="button"  value="Voltar para Menu" class="btn btn-primary"></a>
+                    </form>
+                </div>
         </div>
+        <!--SCRIPT WEB SERVICE CEP-->
+        <script src="js/webServiceCep.js"></script>
         <!--SCRIPT DO BOOTSTRAP-->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
